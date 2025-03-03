@@ -1,0 +1,439 @@
+{
+	"info": {
+		"_postman_id": "9334d4e5-0f95-4afc-99b9-214725e6ba3a",
+		"name": "creative-minds-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32425256"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Delivery",
+					"item": [
+						{
+							"name": "create delivery",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "test1",
+											"type": "text"
+										},
+										{
+											"key": "latitude",
+											"value": "31.052236",
+											"type": "text"
+										},
+										{
+											"key": "longitude",
+											"value": "31.406262",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_API_URL}}/v1/delivery",
+									"host": [
+										"{{APP_API_URL}}"
+									],
+									"path": [
+										"v1",
+										"delivery"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update delivery",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "test1",
+											"type": "text"
+										},
+										{
+											"key": "latitude",
+											"value": "31.052236",
+											"type": "text"
+										},
+										{
+											"key": "longitude",
+											"value": "31.406262",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{APP_API_URL}}/v1/delivery/:id",
+									"host": [
+										"{{APP_API_URL}}"
+									],
+									"path": [
+										"v1",
+										"delivery",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete delivery",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{APP_API_URL}}/v1/delivery/:id",
+									"host": [
+										"{{APP_API_URL}}"
+									],
+									"path": [
+										"v1",
+										"delivery",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show delivery",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{APP_API_URL}}/v1/delivery/:id",
+									"host": [
+										"{{APP_API_URL}}"
+									],
+									"path": [
+										"v1",
+										"delivery",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all paginated delivery",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{APP_API_URL}}/v1/delivery",
+									"host": [
+										"{{APP_API_URL}}"
+									],
+									"path": [
+										"v1",
+										"delivery"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{APP_API_URL}}/v1/profile",
+							"host": [
+								"{{APP_API_URL}}"
+							],
+							"path": [
+								"v1",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-phone-otp",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{APP_API_URL}}/v1/verify-phone-otp",
+							"host": [
+								"{{APP_API_URL}}"
+							],
+							"path": [
+								"v1",
+								"verify-phone-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-phone-check",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "otp",
+									"value": "1564789",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{APP_API_URL}}/v1/verify-phone-check",
+							"host": [
+								"{{APP_API_URL}}"
+							],
+							"path": [
+								"v1",
+								"verify-phone-check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "nearest-delivery",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{APP_API_URL}}/v1/nearest-delivery",
+							"host": [
+								"{{APP_API_URL}}"
+							],
+							"path": [
+								"v1",
+								"nearest-delivery"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsInBob25lIjoiKzIwMTEyNzQ1MzM2MSIsImlhdCI6MTc0MTAxNDk3MSwiZXhwIjoxNzQxMTAxMzcxfQ.V4QCYmSqqKvGpuF4eKZ_vAfTeI5gFgakR0V_4KUQ-JU",
+						"type": "string"
+					}
+				]
+			}
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APP_API_URL}}/v1/test",
+					"host": [
+						"{{APP_API_URL}}"
+					],
+					"path": [
+						"v1",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "ali",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+201127453361",
+							"type": "text"
+						},
+						{
+							"key": "device_token",
+							"value": "XXXXXXXXXXXXXX",
+							"type": "text"
+						},
+						{
+							"key": "thumbnail",
+							"type": "file",
+							"src": "x:\\# my-files (SSD)\\2. recent-learned-subjects\\jobs\\jobs folder\\12 Photos\\الصور\\67459319-6445-4667-8587-aad4cac7c5bb.png"
+						},
+						{
+							"key": "latitude",
+							"value": "31.052230",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "31.406258",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "TestTest1212$$",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APP_API_URL}}/v1/register",
+					"host": [
+						"{{APP_API_URL}}"
+					],
+					"path": [
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "+201127453361",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "TestTest1212$$",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APP_API_URL}}/v1/login",
+					"host": [
+						"{{APP_API_URL}}"
+					],
+					"path": [
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notify-all",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{APP_API_URL}}/v1/notify-all",
+					"host": [
+						"{{APP_API_URL}}"
+					],
+					"path": [
+						"v1",
+						"notify-all"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "APP_API_URL",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}

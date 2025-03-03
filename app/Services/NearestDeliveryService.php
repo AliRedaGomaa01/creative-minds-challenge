@@ -8,14 +8,14 @@ use Illuminate\Support\Facades\DB;
 
 class NearestDeliveryService
 {
-    public function __construct(public Request $request)
+    public function __construct()
     {
     }
 
-    public function getNearestDelivery()
+    public function getNearestDelivery(Request $request)
     {
         try {
-            $user = $this->request->attributes->get('firebaseUser');
+            $user = $request->attributes->get('jwtUser');
 
             if (!$user) {
                 return response()->json(['error' => 'User not found'], 404);
